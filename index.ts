@@ -5,8 +5,8 @@ const PENIS_SCALE_FACTOR = 15;
 const BABY_SCALE_FACTOR = 10;
 const TARGET_SCALE_FACTOR = 10;
 
-const CRY_SOUND = new Audio("sound/crying.ogg");
-const LAUGH_SOUND = new Audio("sound/laughing.ogg");
+const CRY_SOUND = new Audio("sound/crying.mp3");
+const LAUGH_SOUND = new Audio("sound/laughing.mp3");
 const COO_SOUND = new Audio("sound/cooing.mp3");
 
 async function playSound(a: HTMLAudioElement): Promise<void> {

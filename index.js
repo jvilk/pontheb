@@ -1,10 +1,9 @@
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
@@ -14,8 +13,8 @@ const TARGET_IMAGE = "img/target.png";
 const PENIS_SCALE_FACTOR = 15;
 const BABY_SCALE_FACTOR = 10;
 const TARGET_SCALE_FACTOR = 10;
-const CRY_SOUND = new Audio("sound/crying.ogg");
-const LAUGH_SOUND = new Audio("sound/laughing.ogg");
+const CRY_SOUND = new Audio("sound/crying.mp3");
+const LAUGH_SOUND = new Audio("sound/laughing.mp3");
 const COO_SOUND = new Audio("sound/cooing.mp3");
 function playSound(a) {
     return __awaiter(this, void 0, void 0, function* () {
